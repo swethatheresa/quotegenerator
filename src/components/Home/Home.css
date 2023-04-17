@@ -1,5 +1,9 @@
-
-
+.home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .quotebody{
     border-radius: 30px;
     background-color: #D05252;
@@ -10,7 +14,32 @@
     padding: 1.6em;
     color: white;
 }
+
 .tags
 {
-    
+    align-items: center;
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+    padding-left: 1.8em;
+    padding-right: 1.8em;
+    border-radius: 30px;
+    margin: 1.5em;
+}
+
+.btn{
+    color: white;
+    align-items: center;
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+    padding-left: 1.8em;
+    padding-right: 1.8em;
+    border-radius: 30px;
+    margin: 1.5em;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+    background-color: #009C51;
+    border: none;
+    font-weight: 600;
+}
+.btn:hover{
+    background-color: #00B75A;
 }

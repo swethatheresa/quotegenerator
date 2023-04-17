@@ -14,7 +14,9 @@
     padding: 1.6em;
     color: white;
 }
-
+.author{
+    text-align: center;
+}
 .tags
 {
     align-items: center;
@@ -42,4 +44,10 @@
 }
 .btn:hover{
     background-color: #00B75A;
+}
+.bookmark{
+    display: flex;
+    flex-direction: row;
+    flex-direction: row-reverse;
+    cursor: pointer;
 }

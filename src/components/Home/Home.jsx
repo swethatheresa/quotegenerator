@@ -49,6 +49,12 @@ function Home() {
     setSelectedTag(event.target.value);
   };
 
+  const handleBookmark = () => {
+    const bookmarkedQuotes = JSON.parse(localStorage.getItem('bookmarkedQuotes')) || [];
+    bookmarkedQuotes.push(quote);
+    localStorage.setItem('bookmarkedQuotes', JSON.stringify(bookmarkedQuotes));
+  }
+  
   const handleNextQuote = () => {
     if (selectedTag) {
       setLoading(true);
@@ -66,7 +72,7 @@ function Home() {
         .finally(() => setLoading(false));
     }
   };
-  
+
   return (
     <div className="home">
       <div className="quotebody">
@@ -76,7 +82,9 @@ function Home() {
             <div>
               <div className="quote">{quote.content}</div>
               <div className="author">- {quote.author}</div>
-              <BsFillBookmarkPlusFill/>
+              <div className='bookmark'>
+              <BsFillBookmarkPlusFill onClick={handleBookmark} />
+              </div>
             </div>
           )}
       </div>

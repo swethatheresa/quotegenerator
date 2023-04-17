@@ -1,0 +1,13 @@
+.quotebody{
+    border-radius: 30px;
+    background-color: #D05252;
+    margin-left: 10em;
+    margin-right: 10em;
+    margin-top: 9em;
+    margin-bottom: 2em;
+    padding: 1.6em;
+    color: white;
+}
+.author{
+    text-align: center;
+}

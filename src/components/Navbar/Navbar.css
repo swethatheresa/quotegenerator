@@ -1,0 +1,29 @@
+
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #5E2AB3;
+    margin-bottom: 0.2em;
+    display: flex;
+    z-index: 9999;
+    justify-content: space-between;
+}
+
+.i{
+    font-size: 1.3em;
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    margin-top: 0.3em;
+    margin-left: 2em;
+    margin-right: 1.5em;
+    padding: 0.6em;
+    margin-left: 0.1em;
+    background-color: transparent;
+}
+.i:hover{
+    font-weight: 700;
+    cursor: pointer;
+}

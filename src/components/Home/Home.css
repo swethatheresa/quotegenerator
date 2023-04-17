@@ -5,6 +5,7 @@
     align-items: center;
 }
 .quotebody{
+    width: 65vw;
     border-radius: 30px;
     background-color: #D05252;
     margin-left: 10em;

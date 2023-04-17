@@ -83,7 +83,7 @@ function Home() {
               <div className="quote">{quote.content}</div>
               <div className="author">- {quote.author}</div>
               <div className='bookmark'>
-              <BsFillBookmarkPlusFill onClick={handleBookmark} />
+              <BsFillBookmarkPlusFill size={25} onClick={handleBookmark} />
               </div>
             </div>
           )}

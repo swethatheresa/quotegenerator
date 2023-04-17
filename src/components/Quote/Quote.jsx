@@ -3,19 +3,15 @@ import './Quote.css'
 import { useEffect,useState } from 'react';
 import {MdDelete} from 'react-icons/md'
 
-const handleDeleteBookmark = (_id) => {
-  const updatedBookmarks = bookmarks.filter((bookmark) => bookmark._id !== _id);
-  localStorage.setItem('bookmarks', JSON.stringify(updatedBookmarks));
-  setBookmarks(updatedBookmarks);
-};
 
-function Quote({ content, author, key}) {
+
+function Quote({ id, content, author, key ,handleDeleteBookmark}) {
   return (
     <div>
-      <div className="quotebody">
+      <div className="qbody">
             <div className="quote">{content}</div>
             <div className="author">- {author}</div>
-            <div className="delete" onClick={handleDeleteBookmark(key)}><MdDelete/></div>
+            <div className="delete" onClick={() => handleDeleteBookmark(id)}><MdDelete size={25}/></div>
       </div>
     </div>
   )

@@ -1,20 +1,24 @@
 import React from 'react'
 import './Quote.css'
-function Quote({ quote, author}) {
+import { useEffect,useState } from 'react';
+import {MdDelete} from 'react-icons/md'
+
+const handleDeleteBookmark = (_id) => {
+  const updatedBookmarks = bookmarks.filter((bookmark) => bookmark._id !== _id);
+  localStorage.setItem('bookmarks', JSON.stringify(updatedBookmarks));
+  setBookmarks(updatedBookmarks);
+};
+
+function Quote({ content, author, key}) {
   return (
     <div>
       <div className="quotebody">
-        {loading ? (
-          <p>Loading...</p>
-        ) : (
-            <div>
-              <div className="quote">{quote.content}</div>
-              <div className="author">- {quote.author}</div>
-            </div>
-          )}
+            <div className="quote">{content}</div>
+            <div className="author">- {author}</div>
+            <div className="delete" onClick={handleDeleteBookmark(key)}><MdDelete/></div>
       </div>
     </div>
   )
 }
 
-export default Quote
+export default Quote;
